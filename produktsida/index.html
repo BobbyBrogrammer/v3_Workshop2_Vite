@@ -7,20 +7,17 @@
   </head>
 
   <body>
-    <header id="home" class="site-header">
+    <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="#" aria-label="Back to homepage">HOME</a>
+        <a class="logo" href="#" aria-label="Till startsidan">HOME</a>
 
         <nav class="nav" aria-label="Mainnavigation">
-          <button id="menuBtn" class="nav-icon" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
-          <div id="navLinks" class="nav-links">
-            <a class="nav-link" href="#shop">Shop</a>
-            <span class="sep" aria-hidden="true">|</span>
-            <a class="nav-link" href="#about">About</a>
-          </div>
-          <button id="cartBtn" class="nav-icon" type="button" aria-label="Cart">
-            🛒 <span id="cartCount" class="cart-count">0</span>
-          </button>
+          <a class="nav-link" href="#">Shop</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <a class="nav-link" href="#">About</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <button class="nav-icon" type="button" aria-label="Menu">☰</button>
+          <button class="nav-icon" type="button" aria-label="Cart">🛒</button>
         </nav>
       </div>
     </header>
@@ -39,9 +36,7 @@
       <section id="product" class="product-top" aria-label="Productinformation">
         <section class="panel product-media" aria-label="Productpicture">
           <h2 class="panel-title">PRODUCT IMAGE</h2>
-
           <div class="image-placeholder" role="img" aria-label="ProductPic (placeholder)"></div>
-
         </section>
 
         <section class="panel product-details" aria-labelledby="product-title">
@@ -59,9 +54,7 @@
           <hr />
           <p class="desc">Product description</p>
 
-          <button id="addToCartBtn" class="cta" type="button" 
-          data-product-id="p1" data-product-name="Product Name"
-          data-product-price="99.99">Add to Cart</button>
+          <button class="cta" type="button">Add to Cart</button>
 
           <p class="meta">
             <a href="#">Shipping</a>
@@ -75,16 +68,12 @@
 >
   <h2 id="related-title">RELATED PRODUCTS</h2>
 
-  <div class="related-grid">
-    <article class="card">
-      <h3>Product Name</h3>
-      <p class="price">$99.99</p>
-      <button class="add-related" type="button"
-        data-product-id="r1"
-        data-product-name="Related Product 1"
-        data-product-price="99.99"
-      >Add to Cart</button>
-    </article>
+        <div class="related-grid">
+          <article class="related-card">
+            <h3 class="related-name">Product Name1</h3>
+            <p class="related-price">$99.99</p>
+            <p class="muted">Price</p>
+          </article>
 
     <article class="card">
       <h3>Product Name</h3>
@@ -94,26 +83,34 @@
       </button>
     </article>
 
-    <article class="card">
-      <h3>Product Name</h3>
-      <p class="price">$99.99</p>
-      <button
-        class="add-related"
-        type="button"
-        data-product-id="r3"
-        data-product-name="Related Product 3"
-        data-product-price="99.99"
-      >
-        Add to Cart
-      </button>
-    </article>
-  </div>
-</section>
+          <article class="related-card">
+            <h3 class="related-name">Product Name3</h3>
+            <p class="related-price">$99.99</p>
+            <p class="muted">Price</p>
+          </article>
+        </div>
+      </section>
 
+      <!-- ⭐ NEW: REVIEWS SECTION -->
+      <section class="reviews" aria-labelledby="reviews-title">
+        <h2 id="reviews-title" class="section-title">REVIEWS</h2>
 
+        <p class="average-rating">
+          Average rating: <strong>4.5 stars</strong>
+          <a href="#" class="write-review">Write a review</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="#" class="view-all">View all reviews</a>
+        </p>
+
+        <article class="review-card">
+          <h3 class="review-user">User Name</h3>
+          <p class="review-stars">Rating: ★★★★☆</p>
+          <p class="review-text">User review content...</p>
+        </article>
+      </section>
+      <!-- END REVIEWS -->
     </main>
 
-  
     <footer class="site-footer">
       <div class="container footer-inner">
         <small>© 2024 YourStore | Follow us on social media.</small>
@@ -121,6 +118,5 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
-
   </body>
 </html>
