@@ -39,6 +39,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; /*dropdown menu*/
 }
 
 .logo {
@@ -320,4 +321,5 @@ svg {
   .related-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
 }
