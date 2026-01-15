@@ -24,17 +24,17 @@
 
     <nav class="breadcrumbs" aria-label="BREADCRUMBS">
       <div class="container crumbs-inner">
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
         <span class="sep" aria-hidden="true">/</span>
-        <a href="#">Category</a>
+        <a href="#shop">Category</a>
         <span class="sep" aria-hidden="true">/</span>
-        <span aria-current="page">Product</span>
+        <a href="#product">Product</a>
       </div>
     </nav>
 
     <main class="container">
-      <section class="product-top" aria-label="Produktinformation">
-        <section class="panel product-media" aria-label="Produktbild">
+      <section id="product" class="product-top" aria-label="Productinformation">
+        <section class="panel product-media" aria-label="Productpicture">
           <h2 class="panel-title">PRODUCT IMAGE</h2>
           <div class="image-placeholder" role="img" aria-label="ProductPic (placeholder)"></div>
         </section>
@@ -64,8 +64,9 @@
         </section>
       </section>
 
-      <section class="related" aria-labelledby="related-title">
-        <h2 id="related-title" class="section-title">RELATED PRODUCTS</h2>
+      <section id="shop" class="related" aria-labelledby="related-title"
+>
+  <h2 id="related-title">RELATED PRODUCTS</h2>
 
         <div class="related-grid">
           <article class="related-card">
@@ -74,11 +75,13 @@
             <p class="muted">Price</p>
           </article>
 
-          <article class="related-card">
-            <h3 class="related-name">Product Name2</h3>
-            <p class="related-price">$99.99</p>
-            <p class="muted">Price</p>
-          </article>
+    <article class="card">
+      <h3>Product Name</h3>
+      <p class="price">$99.99</p>
+      <button class="add-related" type="button" data-product-id="r2" data-product-name="Related Product 2" data-product-price="99.99">
+        Add to Cart
+      </button>
+    </article>
 
           <article class="related-card">
             <h3 class="related-name">Product Name3</h3>
@@ -88,7 +91,6 @@
         </div>
       </section>
 
-      <!-- ⭐ NEW: REVIEWS SECTION -->
       <section class="reviews" aria-labelledby="reviews-title">
         <h2 id="reviews-title" class="section-title">REVIEWS</h2>
 
@@ -105,7 +107,6 @@
           <p class="review-text">User review content...</p>
         </article>
       </section>
-      <!-- END REVIEWS -->
     </main>
 
     <footer class="site-footer">
