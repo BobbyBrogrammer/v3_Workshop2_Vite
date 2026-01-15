@@ -1,96 +1,233 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ------------------------------
+   RESET & BAS
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: #fafafa;
+  color: #222;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+img,
+svg {
+  max-width: 100%;
+  display: block;
 }
 
-#app {
-  max-width: 1280px;
+.container {
+  width: min(90%, 1200px);
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.site-header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+.nav-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.nav-icon {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* ------------------------------
+   BREADCRUMBS
+------------------------------ */
+.breadcrumbs {
+  background: #eee;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.crumbs-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.breadcrumbs a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ------------------------------
+   PRODUCT TOP (IMAGE + DETAILS)
+------------------------------ */
+.product-top {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.panel-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 250px;
+  background: #ddd;
+  border: 2px dashed #bbb;
+  border-radius: 4px;
+}
+
+/* PRODUCT DETAILS */
+.product-name {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  margin-bottom: 1rem;
+}
+
+.desc {
+  margin: 0.5rem 0;
+}
+
+.cta {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.meta {
+  margin-top: 1rem;
+}
+
+.meta a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* ------------------------------
+   RELATED PRODUCTS
+------------------------------ */
+.related {
+  margin-top: 3rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.related-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.related-card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.related-name {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.related-price {
+  font-weight: bold;
+}
+
+.muted {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+/* ------------------------------
+   MEDIA QUERIES
+------------------------------ */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .product-top {
+    grid-template-columns: 1fr 1fr;
   }
-  a:hover {
-    color: #747bff;
+
+  .image-placeholder {
+    height: 350px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .product-top {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .image-placeholder {
+    height: 400px;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
