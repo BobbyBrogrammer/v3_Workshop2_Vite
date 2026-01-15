@@ -10,8 +10,8 @@
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  background: #fafafa;
-  color: #222;
+  background: #F4F6FF; /* modern soft background */
+  color: #1A1A1A;
 }
 
 img,
@@ -29,9 +29,10 @@ svg {
    HEADER
 ------------------------------ */
 .site-header {
-  background: #222;
+  background: #4C5FD5; /* modern primary */
   color: #fff;
   padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .header-inner {
@@ -44,6 +45,7 @@ svg {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .nav {
@@ -55,13 +57,18 @@ svg {
 .nav-link {
   color: #fff;
   text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav-link:hover {
+  opacity: 1;
 }
 
 .nav-icon {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
@@ -69,8 +76,8 @@ svg {
    BREADCRUMBS
 ------------------------------ */
 .breadcrumbs {
-  background: #eee;
-  padding: 0.5rem 0;
+  background: #E5E7EB;
+  padding: 0.6rem 0;
   font-size: 0.9rem;
 }
 
@@ -81,8 +88,9 @@ svg {
 }
 
 .breadcrumbs a {
-  color: #333;
+  color: #4C5FD5;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* ------------------------------
@@ -97,46 +105,57 @@ svg {
 .panel-title {
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: #777;
+  color: #6B7280;
   margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .image-placeholder {
   width: 100%;
   height: 250px;
-  background: #ddd;
-  border: 2px dashed #bbb;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #D1D5DB, #E5E7EB);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* PRODUCT DETAILS */
 .product-name {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 .price {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  color: #4C5FD5;
   margin-bottom: 0.5rem;
 }
 
 .rating {
   margin-bottom: 1rem;
+  color: #FF7A59;
 }
 
 .desc {
   margin: 0.5rem 0;
+  color: #374151;
 }
 
 .cta {
   margin-top: 1rem;
-  padding: 0.8rem 1.2rem;
-  background: #222;
+  padding: 0.9rem 1.4rem;
+  background: #FF7A59; /* modern accent */
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.cta:hover {
+  background: #ff6a43;
 }
 
 .meta {
@@ -144,8 +163,9 @@ svg {
 }
 
 .meta a {
-  color: #222;
+  color: #4C5FD5;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* ------------------------------
@@ -156,8 +176,10 @@ svg {
 }
 
 .section-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1A1A1A;
 }
 
 .related-grid {
@@ -168,22 +190,92 @@ svg {
 .related-card {
   background: #fff;
   padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .related-name {
   font-size: 1rem;
   margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 
 .related-price {
   font-weight: bold;
+  color: #4C5FD5;
 }
 
 .muted {
-  color: #777;
+  color: #6B7280;
   font-size: 0.9rem;
+}
+
+/* ------------------------------
+   REVIEWS
+------------------------------ */
+.reviews {
+  margin-top: 3rem;
+}
+
+.average-rating {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #374151;
+}
+
+.average-rating strong {
+  color: #4C5FD5;
+}
+
+.average-rating a {
+  color: #4C5FD5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.average-rating a:hover {
+  text-decoration: underline;
+}
+
+.review-card {
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.review-user {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #1A1A1A;
+}
+
+.review-stars {
+  color: #FF7A59;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.review-text {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* ------------------------------
@@ -192,16 +284,15 @@ svg {
 .site-footer {
   margin-top: 3rem;
   padding: 1rem 0;
-  background: #222;
+  background: #454751;
   color: #fff;
   text-align: center;
+  border-radius: 8px 8px 0 0;
 }
 
 /* ------------------------------
    MEDIA QUERIES
 ------------------------------ */
-
-/* Tablet */
 @media (min-width: 600px) {
   .product-top {
     grid-template-columns: 1fr 1fr;
@@ -216,7 +307,6 @@ svg {
   }
 }
 
-/* Desktop */
 @media (min-width: 900px) {
   .product-top {
     grid-template-columns: 1fr 1fr;
