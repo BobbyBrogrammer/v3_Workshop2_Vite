@@ -7,19 +7,96 @@
   </head>
 
   <body>
-    <header>
-      <h1>Produktsida</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="Till startsidan">HOME</a>
+
+        <nav class="nav" aria-label="Mainnavigation">
+          <a class="nav-link" href="#">Shop</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <a class="nav-link" href="#">About</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <button class="nav-icon" type="button" aria-label="Menu">☰</button>
+          <button class="nav-icon" type="button" aria-label="Cart">🛒</button>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p>Här bygger vi layouten</p>
+    <nav class="breadcrumbs" aria-label="BREADCRUMBS">
+      <div class="container crumbs-inner">
+        <a href="#">Home</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="#">Category</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span aria-current="page">Product</span>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="product-top" aria-label="Produktinformation">
+        <section class="panel product-media" aria-label="Produktbild">
+          <h2 class="panel-title">PRODUCT IMAGE</h2>
+
+          <div class="image-placeholder" role="img" aria-label="ProductPic (placeholder)"></div>
+
+        </section>
+
+        <section class="panel product-details" aria-labelledby="product-title">
+          <h2 class="panel-title details-title">PRODUCT DETAILS</h2>
+
+          <h1 id="product-title" class="product-name">Product Name</h1>
+          <p class="price">$99.99</p>
+
+          <p class="rating" aria-label="Betyg 4 av 5">
+            <span aria-hidden="true">★★★★★</span>
+            <span class="sr-only">4 av 5 stjärnor</span>
+          </p>
+
+          <p class="desc">Product description</p>
+          <hr />
+          <p class="desc">Product description</p>
+
+          <button class="cta" type="button">Add to Cart</button>
+
+          <p class="meta">
+            <a href="#">Shipping</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="#">Returns</a>
+          </p>
+        </section>
+      </section>
+
+      <section class="related" aria-labelledby="related-title">
+        <h2 id="related-title" class="section-title">RELATED PRODUCTS</h2>
+
+        <div class="related-grid">
+          <article class="related-card">
+            <h3 class="related-name">Product Name1</h3>
+            <p class="related-price">$99.99</p>
+            <p class="muted">Price</p>
+          </article>
+
+          <article class="related-card">
+            <h3 class="related-name">Product Name2</h3>
+            <p class="related-price">$99.99</p>
+            <p class="muted">Price</p>
+          </article>
+
+          <article class="related-card">
+            <h3 class="related-name">Product Name3</h3>
+            <p class="related-price">$99.99</p>
+            <p class="muted">Price</p>
+          </article>
+        </div>
+      </section>
+
     </main>
 
-    <footer>
-      <p>Footer</p>
+  
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>© 2024 YourStore | Follow us on social media.</small>
+      </div>
     </footer>
-
-    <!-- Vite + ES-moduler -->
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
